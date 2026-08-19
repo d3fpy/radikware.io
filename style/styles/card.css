@@ -1,0 +1,175 @@
+
+.member-card {
+  position: relative;
+  aspect-ratio: 1 / 1.2;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0d0000;
+  border: 1px solid rgba(180, 30, 30, 0.15);
+  transition: 
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+  cursor: default;
+}
+
+/* Неоновое свечение (размытый фон) */
+.member-card::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(224, 48, 48, 0.8),
+    rgba(255, 100, 100, 0.4),
+    rgba(224, 48, 48, 0.8),
+    rgba(180, 0, 0, 0.6)
+  );
+  background-size: 300% 300%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: -1;
+  filter: blur(8px);
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
+.member-card:hover::after {
+  opacity: 1;
+}
+
+/* Граница с градиентом */
+.member-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(224, 48, 48, 1),
+    rgba(255, 150, 150, 0.6),
+    rgba(224, 48, 48, 1),
+    rgba(180, 0, 0, 0.8)
+  );
+  background-size: 300% 300%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: -1;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+.member-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes neonPulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.member-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 
+    0 0 30px rgba(224, 48, 48, 0.2),
+    0 0 60px rgba(224, 48, 48, 0.1),
+    0 0 90px rgba(224, 48, 48, 0.05),
+    0 20px 60px rgba(0, 0, 0, 0.3);
+  border-color: rgba(224, 48, 48, 0.6);
+}
+
+.member-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.member-card:hover .member-bg {
+  transform: scale(1.05);
+}
+
+.member-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 30%,
+    rgba(8, 0, 0, 0.7) 70%,
+    rgba(8, 0, 0, 0.9) 100%
+  );
+}
+
+.member-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.member-badge:hover {
+  background: var(--red);
+  border-color: var(--red);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(224, 48, 48, 0.4);
+}
+
+.member-badge svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+
+.member-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px 20px;
+  z-index: 2;
+}
+.member-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+  transition: text-shadow 0.4s ease, color 0.4s ease;
+}
+
+
+
+.member-role {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--red);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, text-shadow 0.4s ease;
+}
+
+.member-card:hover .member-role {
+  opacity: 1;
+  text-shadow: 
+    0 0 10px rgba(224, 48, 48, 0.6),
+    0 0 20px rgba(224, 48, 48, 0.3);
+}

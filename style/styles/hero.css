@@ -1,0 +1,43 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 40px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg-text {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(80px, 14vw, 200px);
+  font-weight: 900;
+  color: rgba(180,0,0,0.06);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-sub {
+  position: relative;
+  font-size: clamp(13px, 1.5vw, 16px);
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 48px;
+}
+
+.hero-stats {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
