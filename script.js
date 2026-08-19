@@ -1,4 +1,3 @@
-// Loader → page reveal
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.getElementById('loader').classList.add('hidden');
@@ -6,7 +5,6 @@ window.addEventListener('load', () => {
   }, 1800);
 });
 
-// Scroll-triggered fade-up
 const fadeEls = document.querySelectorAll('.member-card, .about-card, .hero-stats, .hero-sub');
 fadeEls.forEach(el => el.classList.add('fade-up'));
 
@@ -20,3 +18,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 fadeEls.forEach(el => observer.observe(el));
+
