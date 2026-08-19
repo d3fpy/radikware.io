@@ -1,0 +1,11 @@
+@media (max-width: 900px) {
+  .members-grid { grid-template-columns: 1fr 1fr; }
+  .hero { padding: 60px 24px 60px; }
+  .members-section { padding: 0 24px 60px; }
+  .header-inner { padding: 0 24px; }
+}
+
+@media (max-width: 560px) {
+  .members-grid { grid-template-columns: 1fr; }
+  .header-nav { display: none; }
+}
