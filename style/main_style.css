@@ -5,6 +5,7 @@
 :root {
   --red: #e03030;
   --red-dim: rgba(220,50,50,0.35);
+
   zoom: 1.20
 }
 
@@ -103,4 +104,6 @@ body::after {
 .member-card:nth-child(9) { transition-delay: 0.45s; }
 
 .hero-sub { transition-delay: 0.1s; }
+
+.hero-stats { transition-delay: 0.2s; }
 .hero-stats { transition-delay: 0.2s; }

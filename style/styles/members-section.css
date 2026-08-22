@@ -25,3 +25,31 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+
+.members-section {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.section-line {
+  width: 60px;
+  height: 2px;
+  background: var(--red);
+  opacity: 0.4;
+  border-radius: 4px;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
