@@ -1,0 +1,50 @@
+@keyframes magicalGradient1 {
+  0% {
+    background-position: 0% 0%;
+    opacity: 0.8;
+  }
+  20% {
+    background-position: 100% 0%;
+    opacity: 1;
+  }
+  40% {
+    background-position: 100% 100%;
+    opacity: 0.9;
+  }
+  60% {
+    background-position: 0% 100%;
+    opacity: 1;
+  }
+  80% {
+    background-position: 50% 50%;
+    opacity: 0.95;
+  }
+  100% {
+    background-position: 0% 0%;
+    opacity: 0.85;
+  }
+}
+
+@keyframes magicalGradient2 {
+  0% {
+    background-position: 0% 0%;
+    opacity: 0.4;
+  }
+  25% {
+    background-position: 100% 50%;
+    opacity: 0.6;
+  }
+  50% {
+    background-position: 50% 100%;
+    opacity: 0.5;
+  }
+  75% {
+    background-position: 0% 50%;
+    opacity: 0.7;
+  }
+  100% {
+    background-position: 100% 0%;
+    opacity: 0.4;
+  }
+}
+
